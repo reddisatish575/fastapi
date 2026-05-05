@@ -1,95 +1,21 @@
-1. A super fast web framewrok, it is ver modern framework
-2. It has asynchronus programming.
-3. It has automatic documentation (Swagger UI & ReDoc)
-4. It uses python >3.6 and uses pydantic library (statically typed).
-5. It follows json schema and follows Open API rules .
-6. It has security and authentication
-	-> HTTP Basic
-	-> OAuth2 (also with JWT Tokens)
-	-> API keys in headers, QueryParameters, Cookies etc.,
-7. We have DI and unlimited plug-ins
-7. It has Stalette Features
-	-> WebSocket support
-	-> GraphQl support
-	-> In-Process background tasks
-	-> Startup and shutdown events
-	-> Test client built on requests
-	-> CORS, GZip, Static Files, Streaming responses
-	-> Session and Cookie support
-8. DB supports
-	-> SQL Databases, NoSql DB, graphQL also
-9. Basic Concepts
-	-> Path Parameters
-	-> API Docs - Swagger/redocs
-	-> Query Parameters
-	-> Request body
-10. Intermediate Concepts
-	-> Debugging FastAPI
-	-> Pydantic schemas
-	-> SqlAlchemy DB connection
-	-> Models and tables
-11. Database tasks
-	-> get, post, put, delete
-12. Responses
-	-> Handling Exceptions
-	-> Return response
-	-> Define response model
-13. User and Password
-	-> Create user
-	-> Hash user password
-	-> show single user
-	-> deined doc tags
-14. Relationship
-	-> Define user to blog relationship
-	-> define blog to user relationship
-15. Refacot for bigger application
-	-> API Router
-	-> API Router with parameters
-16. Authentication using JWT(Json web token)
-	-> create login route
-	-> login and verify password
-	-> return JWT access token
-	-> Routes behind authentication
-16. deploy FastApi
-	-> using deta.sh website to deploy
+FastApi Commands
+1. pip3 install "fastapi[all]"
+    -> To install the FastApi
+2.  pip3 freeze
+    -> To list out the installed packages
+3. uvicorn main:app --reload or uvicorn app.main:app --reload
+    -> first app is package folder
+    -> main is main.py file name
+    -> second app is fastapi instance in main.py
+    -> To run the server
+4. pip3 install psycopg2
+    -> Used to connect with postgres database
+5. pip3 install psycopg2
+    -> to upgrade pip
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+-> Whatever you keep the request url's, the scanning will be from top to bottom,
+    if one reuqest found then it will automatically returns that request.
+-> Let's suppose we have two routes, like posts/2 and posts/latest next by next , 
+    Here if 2 is path parameter then latest will be also act as path parameter. 
+-> So Always Keep path parameter routes at bottom

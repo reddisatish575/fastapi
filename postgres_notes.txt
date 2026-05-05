@@ -1,0 +1,18 @@
+What is DataBase ?
+    -> DataBase is a Collection of organized data that can be easily accessed and managed.
+-> we dont work or interact with database directly
+-> Instead we make use of a software referred to as a DBMS
+-> Popular DBMS 
+    1. Relational
+        -> MySql, Postgresql, Oracle, Sql_server
+    2. NoSQL
+        -> MongoDb, DynamoDB, Oracle, Sql_server 
+
+==========================================
+            POSTGRES
+==========================================
+-> Each Instance of postgres can be carved into multiple separate databases.
+-> By Default every postgres installation comes with one database already created called "postgres"
+-> This is important because Postgres requires you to specify the name of a 
+    database to make a connection. so there needs to always be one database.
+-> 
