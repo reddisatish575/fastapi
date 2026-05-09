@@ -19,3 +19,25 @@ FastApi Commands
 -> Let's suppose we have two routes, like posts/2 and posts/latest next by next , 
     Here if 2 is path parameter then latest will be also act as path parameter. 
 -> So Always Keep path parameter routes at bottom
+
+-> ORM (Object Relational Mapper)
+    -> Layer of abstraction that sits between the database and us 
+    -> we can perform all database operations through traditiona; python code, No more SQL
+
+                Sql 
+    FastApi   <======>  DataBase
+
+                Python              psycopg2 & SQL
+    FastApi <===========> ORM <=====================> DataBase
+
+    ->  With ORM, fastapi talks with ORM directly instead of Database, ORM will
+    take that python code and convert into regular sql using same database driver.
+    ->By this way, we can avoid complex sql queries and we can use classes and Objects.
+
+-> SQLAlchemy
+    -> SQLAlchemy is one of the most popular python ORMs
+    -> it is a standalone library and has no association with fastapi. it can be used
+     with any other python web frameworks or any python based appplication.
+    -> The SQLAlchemy ORM (Object Relational Mapper) is a high-level Python library that
+     maps database tables to Python classes. It allows developers to interact with 
+     relational databases using object-oriented code instead of writing raw SQL
