@@ -12,6 +12,9 @@ FastApi Commands
     -> Used to connect with postgres database
 5. pip3 install psycopg2
     -> to upgrade pip
+6. pip3 install "passlib[bcrypt]"
+    -> for encryption and decryption
+7. pip3 install "python-jose[cryptography]"
 
 
 -> Whatever you keep the request url's, the scanning will be from top to bottom,

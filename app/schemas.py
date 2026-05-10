@@ -1,6 +1,6 @@
-from pydantic import BaseModel, ConfigDict
+from pydantic import BaseModel, ConfigDict, EmailStr
 from datetime import datetime
-# from typing import Optional
+from typing import Optional
 
 # Request Modesl
 
@@ -44,5 +44,33 @@ class Post(PostBase):
     #new pydantic
     model_config = ConfigDict(from_attributes=True)
 
+# Users schemas
+#Request model
+class UserBody(BaseModel):
+    # email : str
+    email : EmailStr
+    password : str
+
+#Response Model 
+class UserResponse(BaseModel):
+    id : int 
+    email : EmailStr
+    created_at : datetime
+
+    model_config = ConfigDict(from_attributes=True)
+
+
+# Login Schemas
+
+class UserLogin(BaseModel):
+    email :str 
+    password :str
+    
+class Token(BaseModel):
+    access_token :str
+    token_type:str
+
+class TokenData(BaseModel):
+    id : str | None = None
 
 
